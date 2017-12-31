@@ -1,0 +1,119 @@
+<style>
+body {
+  text-align: center;
+  width: 600px;
+  margin: 0px auto;
+  background-color: #9932CC;
+  padding: 20px;
+}
+
+h1 {
+  margin: 10px auto;
+  font-size: 3em;
+  color: #FFFFFF;
+  font-family: 'Raleway', sans-serif;
+  
+}
+
+button {
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 1.25rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid ;
+  color: #FF1493;
+  background-color: white;
+  font-family: 'Raleway', sans-serif;
+}
+
+.quote {
+  font-family: "Cardo", serif;
+  font-size: 2.2em;
+  width: 600px;
+  height: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #FFFFFF;
+  border-radius: 20px;
+  color: #000;
+  font-family: '', sans-serif;
+  
+}
+.author {
+  font-style: bold;
+  font-size: .5em;
+  color: #808080;
+  font-family: "Rubik", sans-serif;
+}
+
+.icon-button {
+  border-radius: 0.6rem;
+  cursor: pointer;
+  display: inline-block;
+  height: 10rem;
+  margin: 5px;
+}
+</style>
+
+<body>
+
+<link href="https://fonts.googleapis.com/css?family=Montserrat|Rubik" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Faster+One|Raleway:800" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+
+<div class="container-fluid">
+  <h1>Taco Bell Menu Ideas</h1>
+  
+  <div class="quote"><span class="saying"></span><br><span class="author"></span>
+    <div class="image"></div>
+
+    <a href="#"><img alt="TacoBell." class=icon-button src="http://akns-images.eonline.com/eol_images/Entire_Site/2013728/rs_560x415-130828154710-560.tacobell-logo.cm.82813.jpg"></a>
+
+    <div>
+      <button class=button>More Food</button>
+    </div>
+  </div>
+  </div>
+    
+    </body>
+
+<script>
+
+$( document ).ready(function() {
+	generate();
+
+function generate(){
+    var quotes = ["Nacho Cheese Doritos® Locos Tacos Supreme@190 Cal | $2.19" ,
+"Nacho Cheese Doritos® Locos Tacos@170 Cal | $1.69",
+"Fiery Doritos Locos Tacos Supreme@190 Cal | $2.19" ,
+"Fiery Doritos Locos Tacos@170 Cal | $1.69" ,
+"Cool Ranch Doritos Locos Tacos Supreme@190 Cal | $2.19" ,
+"Cool Ranch Doritos Locos Tacos@170 Cal | $1.69" ,
+"Crunchy Taco@170 Cal | $1.29" ,
+"Crunchy Taco Supreme@190 Cal | $1.79" ,               
+"Soft Taco@170 Cal | $1.29" ,
+"Soft Taco Supreme@210 Cal | $1.79" ,
+"Chicken Soft Taco@170 Cal | $1.79" ,
+"Grilled Steak Soft Taco@200 Cal | $2.59" ,
+"Double Decker Taco@320 Cal | $1.99" ,
+"Double Decker Taco Supreme@340 Cal | $2.29" ,
+"Cheesy Gordita Crunch@500 Cal | $3.19" ,
+"Doritos® Cheesy Gordita Crunch@490 Cal | $3.29"];
+  
+  randomQuote = quotes[Math.floor(Math.random()*quotes.length)];
+    quoteAuthor=randomQuote.split("@");
+		$('.saying').text(quoteAuthor[0]);
+    $('.author').text(quoteAuthor[1]);
+   
+  }
+  
+$(".button").on( "click", function() {
+    generate();
+});  
+  
+});
+    
+</script>
+
